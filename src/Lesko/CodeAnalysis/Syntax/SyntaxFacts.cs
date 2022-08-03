@@ -89,8 +89,6 @@ namespace Lesko.CodeAnalysis.Syntax
                     return SyntaxKind.WhileKeyword;
                 case "do":
                     return SyntaxKind.DoKeyword;
-                case "or":
-                    return SyntaxKind.PipePipeToken;
                 default:
                     return SyntaxKind.IdentifierToken;
             }
