@@ -35,6 +35,7 @@ namespace Lesko.CodeAnalysis.Syntax
         IdentifierToken,
         FloatToken,
         PowerToken,
+        ModToken,
 
         // Keywords
         BreakKeyword,

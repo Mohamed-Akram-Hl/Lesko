@@ -69,6 +69,10 @@ namespace Lesko.CodeAnalysis.Syntax
                         _position++;
                     }
                     break;
+                case '%':
+                    _kind = SyntaxKind.ModToken;
+                    _position++;
+                    break;
                 case '/':
                     _kind = SyntaxKind.SlashToken;
                     _position++;
@@ -290,7 +294,7 @@ namespace Lesko.CodeAnalysis.Syntax
             }
             if (countDots == 1)
             {
-                if (!decimal.TryParse(text, out var value))
+                if (!double.TryParse(text, out var value))
                 {
                     var span = new TextSpan(_start, length);
                     var location = new TextLocation(_text, span);

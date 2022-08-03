@@ -17,6 +17,7 @@ namespace Lesko.CodeAnalysis.Binding
         LessOrEquals,
         Greater,
         GreaterOrEquals,
-        power,
+        Power,
+        Mod,
     }
 }

@@ -164,6 +164,9 @@ namespace Lesko.Tests.CodeAnalysis.Syntax
             if (t1Kind == SyntaxKind.StarToken && t2Kind == SyntaxKind.StarToken)
                 return true;
 
+            if (t1Kind == SyntaxKind.StarToken && t2Kind == SyntaxKind.PowerToken)
+                return true;
+
             if (t1Kind == SyntaxKind.BangToken && t2Kind == SyntaxKind.EqualsToken)
                 return true;
 

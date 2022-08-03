@@ -18,10 +18,6 @@ namespace Lesko
         private bool _showProgram;
         private readonly Dictionary<VariableSymbol, object> _variables = new Dictionary<VariableSymbol, object>();
 
-        public LeskoRepl()
-        {
-            LoadSubmissions();
-        }
 
         protected override void RenderLine(string line)
         {
@@ -48,6 +44,18 @@ namespace Lesko
 
                 Console.ResetColor();
             }
+        }
+
+        [MetaCommand("sub", "Clears the screen")]
+        private void EvaluateSub()
+        {
+            LoadSubmissions();
+        }
+
+        [MetaCommand("about", "show some information")]
+        private void EvaluateAbout()
+        {
+            Console.WriteLine("Compiler for the algorithmic language\nmade by Akram Helali\ninspired from minsk Compiler\nthanks for everyone supported The whole way along");
         }
 
         [MetaCommand("cls", "Clears the screen")]

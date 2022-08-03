@@ -189,39 +189,41 @@ namespace Lesko.CodeAnalysis
                     {
                         if (b.Type == TypeSymbol.String)
                             return (string)left + (string)right;
-                        var res = Convert.ToDecimal(left) + Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) + Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (int)res;
                     }
                 case BoundBinaryOperatorKind.Subtraction:
                     {
-                        var res = Convert.ToDecimal(left) - Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) - Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (int)res;
                     }
                 case BoundBinaryOperatorKind.Multiplication:
                     {
-                        var res = Convert.ToDecimal(left) * Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) * Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (int)res;
                     }
                 case BoundBinaryOperatorKind.Division:
                     {
-                        var res = Convert.ToDecimal(left) / Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) / Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (int)res;
                     }
-                case BoundBinaryOperatorKind.power:
+                case BoundBinaryOperatorKind.Power:
                     {
                         var res = Math.Pow(Convert.ToDouble(left), Convert.ToDouble(right));
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (int)res;
                     }
+                case BoundBinaryOperatorKind.Mod:
+                    return (int)left % (int)right;
                 case BoundBinaryOperatorKind.BitwiseAnd:
                     if (b.Type == TypeSymbol.Int)
                         return (int)left & (int)right;
@@ -247,28 +249,28 @@ namespace Lesko.CodeAnalysis
                     return !Equals(left, right);
                 case BoundBinaryOperatorKind.Less:
                     {
-                        var res = Convert.ToDecimal(left) < Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) < Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (bool)res;
                     }
                 case BoundBinaryOperatorKind.LessOrEquals:
                     {
-                        var res = Convert.ToDecimal(left) <= Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) <= Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (bool)res;
                     }
                 case BoundBinaryOperatorKind.Greater:
                     {
-                        var res = Convert.ToDecimal(left) > Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) > Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (bool)res;
                     }
                 case BoundBinaryOperatorKind.GreaterOrEquals:
                     {
-                        var res = Convert.ToDecimal(left) >= Convert.ToDecimal(right);
+                        var res = Convert.ToDouble(left) >= Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
                         return (bool)res;
@@ -297,6 +299,24 @@ namespace Lesko.CodeAnalysis
                     _random = new Random();
 
                 return _random.Next(max);
+            }
+            else if (node.Function == BuiltinFunctions.abs)
+            {
+                var max = (int)EvaluateExpression(node.Arguments[0]);
+
+                return Math.Abs(max);
+            }
+            else if (node.Function == BuiltinFunctions.sqrt)
+            {
+                var max = (int)EvaluateExpression(node.Arguments[0]);
+
+                return Math.Sqrt(max);
+            }
+            else if (node.Function == BuiltinFunctions.round)
+            {
+                var max = (int)EvaluateExpression(node.Arguments[0]);
+
+                return Math.Round(Convert.ToDouble(max));
             }
             else
             {
@@ -329,7 +349,7 @@ namespace Lesko.CodeAnalysis
             else if (node.Type == TypeSymbol.Int)
                 return Convert.ToInt32(value);
             else if (node.Type == TypeSymbol.Float)
-                return Convert.ToDecimal(value);           
+                return Convert.ToDouble(value);           
             else if (node.Type == TypeSymbol.String)
                 return Convert.ToString(value);
             else

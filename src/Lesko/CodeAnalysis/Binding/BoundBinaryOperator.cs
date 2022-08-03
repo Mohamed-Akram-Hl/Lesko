@@ -37,6 +37,7 @@ namespace Lesko.CodeAnalysis.Binding
             new BoundBinaryOperator(SyntaxKind.PlusToken, BoundBinaryOperatorKind.Addition, TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.PlusToken, BoundBinaryOperatorKind.Addition, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.PlusToken, BoundBinaryOperatorKind.Addition, TypeSymbol.Int,TypeSymbol.Float,TypeSymbol.Float),
+
             new BoundBinaryOperator(SyntaxKind.MinusToken, BoundBinaryOperatorKind.Subtraction, TypeSymbol.Int),
             new BoundBinaryOperator(SyntaxKind.MinusToken, BoundBinaryOperatorKind.Subtraction, TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.MinusToken, BoundBinaryOperatorKind.Subtraction, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
@@ -52,10 +53,12 @@ namespace Lesko.CodeAnalysis.Binding
             new BoundBinaryOperator(SyntaxKind.SlashToken, BoundBinaryOperatorKind.Division, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.SlashToken, BoundBinaryOperatorKind.Division, TypeSymbol.Int,TypeSymbol.Float,TypeSymbol.Float),
 
-            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.power, TypeSymbol.Int),
-            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.power, TypeSymbol.Float),
-            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.power, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
-            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.power, TypeSymbol.Int,TypeSymbol.Float,TypeSymbol.Float),
+            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Int),
+            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Float),
+            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
+            new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Int,TypeSymbol.Float,TypeSymbol.Float),
+
+            new BoundBinaryOperator(SyntaxKind.ModToken, BoundBinaryOperatorKind.Mod, TypeSymbol.Int),
 
             new BoundBinaryOperator(SyntaxKind.AmpersandToken, BoundBinaryOperatorKind.BitwiseAnd, TypeSymbol.Int),
             new BoundBinaryOperator(SyntaxKind.PipeToken, BoundBinaryOperatorKind.BitwiseOr, TypeSymbol.Int),

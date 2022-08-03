@@ -28,6 +28,7 @@ namespace Lesko.CodeAnalysis.Syntax
                     return 6;
                 case SyntaxKind.StarToken:
                 case SyntaxKind.SlashToken:
+                case SyntaxKind.ModToken:
                     return 5;
 
                 case SyntaxKind.PlusToken:
@@ -129,6 +130,8 @@ namespace Lesko.CodeAnalysis.Syntax
                     return "/";
                 case SyntaxKind.PowerToken:
                     return "**";
+                case SyntaxKind.ModToken:
+                    return "%";
                 case SyntaxKind.BangToken:
                     return "!";
                 case SyntaxKind.EqualsToken:
