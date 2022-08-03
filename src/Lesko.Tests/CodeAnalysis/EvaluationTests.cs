@@ -19,6 +19,7 @@ namespace Lesko.Tests.CodeAnalysis
         [InlineData("4 * 2", 8)]
         [InlineData("3 ** 2", 9)]
         [InlineData("9 / 3", 3)]
+        [InlineData("3 % 2", 1)]
         [InlineData("(10)", 10)]
         [InlineData("12 == 3", false)]
         [InlineData("3 == 3", true)]

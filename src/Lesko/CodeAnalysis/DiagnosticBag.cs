@@ -44,6 +44,12 @@ namespace Lesko.CodeAnalysis
             Report(location, message);
         }
 
+        public void ReportUnterminatedMultiLineComment(TextLocation location)
+        {
+            var message = "Unterminated multi-line comment.";
+            Report(location, message);
+        }
+
         public void ReportUnexpectedToken(TextLocation location, SyntaxKind actualKind, SyntaxKind expectedKind)
         {
             var message = $"Unexpected token <{actualKind}>, expected <{expectedKind}>.";

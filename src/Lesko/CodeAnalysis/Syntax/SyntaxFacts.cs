@@ -56,6 +56,11 @@ namespace Lesko.CodeAnalysis.Syntax
                     return 0;
             }
         }
+        public static bool IsComment(this SyntaxKind kind)
+        {
+            return kind == SyntaxKind.SingleLineCommentToken ||
+                   kind == SyntaxKind.MultiLineCommentToken;
+        }
 
         public static SyntaxKind GetKeywordKind(string text)
         {

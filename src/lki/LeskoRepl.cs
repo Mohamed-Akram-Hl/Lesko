@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using Lesko.CodeAnalysis.Text;
 using System.IO;
 using System.Linq;
 using Lesko.CodeAnalysis;
@@ -19,15 +21,51 @@ namespace Lesko
         private readonly Dictionary<VariableSymbol, object> _variables = new Dictionary<VariableSymbol, object>();
 
 
-        protected override void RenderLine(string line)
+        private sealed class RenderState
         {
-            var tokens = SyntaxTree.ParseTokens(line);
-            foreach (var token in tokens)
+            public RenderState(SourceText text, ImmutableArray<SyntaxToken> tokens)
             {
+                Text = text;
+                Tokens = tokens;
+            }
+
+            public SourceText Text { get; }
+            public ImmutableArray<SyntaxToken> Tokens { get; }
+        }
+
+        protected override object RenderLine(IReadOnlyList<string> lines, int lineIndex, object state)
+        {
+            RenderState renderState;
+
+            if (state == null)
+            {
+                var text = string.Join(Environment.NewLine, lines);
+                var sourceText = SourceText.From(text);
+                var tokens = SyntaxTree.ParseTokens(sourceText);
+                renderState = new RenderState(sourceText, tokens);
+            }
+            else
+            {
+                renderState = (RenderState)state;
+            }
+
+            var lineSpan = renderState.Text.Lines[lineIndex].Span;
+
+            foreach (var token in renderState.Tokens)
+            {
+                if (!lineSpan.OverlapsWith(token.Span))
+                    continue;
+
+                var tokenStart = Math.Max(token.Span.Start, lineSpan.Start);
+                var tokenEnd = Math.Min(token.Span.End, lineSpan.End);
+                var tokenSpan = TextSpan.FromBounds(tokenStart, tokenEnd);
+                var tokenText = renderState.Text.ToString(tokenSpan);
+
                 var isKeyword = token.Kind.ToString().EndsWith("Keyword");
                 var isIdentifier = token.Kind == SyntaxKind.IdentifierToken;
                 var isNumber = token.Kind == SyntaxKind.NumberToken || token.Kind == SyntaxKind.FloatToken;
                 var isString = token.Kind == SyntaxKind.StringToken;
+                var isComment = token.Kind.IsComment();
 
                 if (isKeyword)
                     Console.ForegroundColor = ConsoleColor.Blue;
@@ -37,13 +75,16 @@ namespace Lesko
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 else if (isString)
                     Console.ForegroundColor = ConsoleColor.Magenta;
+                else if (isComment)
+                    Console.ForegroundColor = ConsoleColor.Green;
                 else
                     Console.ForegroundColor = ConsoleColor.DarkGray;
 
-                Console.Write(token.Text);
+                Console.Write(tokenText);
 
                 Console.ResetColor();
             }
+            return renderState;
         }
 
         [MetaCommand("sub", "Clears the screen")]
@@ -147,7 +188,8 @@ namespace Lesko
             var syntaxTree = SyntaxTree.Parse(text);
 
             // Use Members because we need to exclude the EndOfFileToken.
-            if (syntaxTree.Root.Members.Last().GetLastToken().IsMissing)
+            var lastMember = syntaxTree.Root.Members.LastOrDefault();
+            if (lastMember == null || lastMember.GetLastToken().IsMissing)
                 return false;
 
             return true;
