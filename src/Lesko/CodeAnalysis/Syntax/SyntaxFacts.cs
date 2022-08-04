@@ -96,7 +96,7 @@ namespace Lesko.CodeAnalysis.Syntax
                     return SyntaxKind.DoKeyword;
                 case "ou":
                     return SyntaxKind.PipePipeToken;
-                case "and":
+                case "et":
                     return SyntaxKind.AmpersandAmpersandToken;
                 default:
                     return SyntaxKind.IdentifierToken;
