@@ -1,4 +1,4 @@
-fonction sum(a: entier, b: entier): entier
+fonction sub(a: entier, b: entier): entier
                 {
                     retourner a - b
                 }
@@ -6,7 +6,7 @@ ecrire("entrer votre année de naissance:")
 var x = entier(lire())
 ecrire("en quelle année sommes nous ??")
 var y = entier(lire())
-var z = sum(y, x)
+var z = sub(y, x)
 ecrire("votre age est: "+ chaine(z))
 si z < 15
     ecrire("tu es un enfant")

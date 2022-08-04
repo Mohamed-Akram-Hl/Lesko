@@ -66,9 +66,9 @@ namespace Lesko.CodeAnalysis.Syntax
         {
             switch (text)
             {
-                case "break":
+                case "arreter":
                     return SyntaxKind.BreakKeyword;
-                case "continue":
+                case "continuer":
                     return SyntaxKind.ContinueKeyword;
                 case "sinon":
                     return SyntaxKind.ElseKeyword;
@@ -92,8 +92,12 @@ namespace Lesko.CodeAnalysis.Syntax
                     return SyntaxKind.VarKeyword;
                 case "tantque":
                     return SyntaxKind.WhileKeyword;
-                case "do":
+                case "faire":
                     return SyntaxKind.DoKeyword;
+                case "ou":
+                    return SyntaxKind.PipePipeToken;
+                case "and":
+                    return SyntaxKind.AmpersandAmpersandToken;
                 default:
                     return SyntaxKind.IdentifierToken;
             }
@@ -176,9 +180,9 @@ namespace Lesko.CodeAnalysis.Syntax
                 case SyntaxKind.CommaToken:
                     return ",";
                 case SyntaxKind.BreakKeyword:
-                    return "break";
+                    return "arreter";
                 case SyntaxKind.ContinueKeyword:
-                    return "continue";
+                    return "continuer";
                 case SyntaxKind.ElseKeyword:
                     return "sinon";
                 case SyntaxKind.FalseKeyword:
@@ -202,7 +206,7 @@ namespace Lesko.CodeAnalysis.Syntax
                 case SyntaxKind.WhileKeyword:
                     return "tantque";
                 case SyntaxKind.DoKeyword:
-                    return "do";
+                    return "faire";
                 default:
                     return null;
             }
