@@ -10,7 +10,7 @@ var z = sub(y, x)
 ecrire("votre age est: "+ chaine(z))
 si z < 15
     ecrire("tu es un enfant")
-sinon si z >= 15 && z < 60
+sinon si z >= 15 et z < 60
     ecrire("tu es jeune")
 sinon
     ecrire("tu es vieux")
