@@ -36,17 +36,20 @@ namespace Lesko.CodeAnalysis.Binding
                 return Conversion.Explicit;
             }
 
-            if (from == TypeSymbol.Bool || from == TypeSymbol.Int)
+            if (from == TypeSymbol.Bool || from == TypeSymbol.Int || from == TypeSymbol.Float)
             {
                 if (to == TypeSymbol.String)
                     return Conversion.Explicit;
             }
             if (from == TypeSymbol.Int && to == TypeSymbol.Float)
+            {
                 return Conversion.Implicit;
-
-            if (from == TypeSymbol.Float && to == TypeSymbol.Int)
+            }
+                
+            if (from == TypeSymbol.Int && to == TypeSymbol.Float)
+            {
                 return Conversion.Implicit;
-
+            }             
             if (from == TypeSymbol.String)
             {
                 if (to == TypeSymbol.Bool || to == TypeSymbol.Int)
