@@ -98,6 +98,8 @@ namespace Lesko.CodeAnalysis.Syntax
                     return SyntaxKind.PipePipeToken;
                 case "et":
                     return SyntaxKind.AmpersandAmpersandToken;
+                case "mod":
+                    return SyntaxKind.ModToken;
                 default:
                     return SyntaxKind.IdentifierToken;
             }

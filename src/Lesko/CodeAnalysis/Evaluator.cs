@@ -288,7 +288,7 @@ namespace Lesko.CodeAnalysis
             }
             else if (node.Function == BuiltinFunctions.Print)
             {
-                var message = (string)EvaluateExpression(node.Arguments[0]);
+                var message = EvaluateExpression(node.Arguments[0]);
                 Console.WriteLine(message);
                 return null;
             }
@@ -308,15 +308,27 @@ namespace Lesko.CodeAnalysis
             }
             else if (node.Function == BuiltinFunctions.sqrt)
             {
-                var max = (int)EvaluateExpression(node.Arguments[0]);
+                var max = EvaluateExpression(node.Arguments[0]);
 
-                return Math.Sqrt(max);
+                return Math.Sqrt(Convert.ToDouble(max));
             }
             else if (node.Function == BuiltinFunctions.round)
             {
                 var max = (int)EvaluateExpression(node.Arguments[0]);
 
                 return Math.Round(Convert.ToDouble(max));
+            }
+            else if (node.Function == BuiltinFunctions.type)
+            {
+                var max = EvaluateExpression(node.Arguments[0]);
+
+                return max.GetType();
+            }
+            else if (node.Function == BuiltinFunctions.len)
+            {
+                var max = Convert.ToString(EvaluateExpression(node.Arguments[0]));
+
+                return max.Length;
             }
             else
             {
