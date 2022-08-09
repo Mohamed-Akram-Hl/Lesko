@@ -38,6 +38,7 @@ namespace Lesko.CodeAnalysis.Syntax
         FloatToken,
         PowerToken,
         ModToken,
+        DivKeyword,
 
         // Keywords
         BreakKeyword,
@@ -83,5 +84,6 @@ namespace Lesko.CodeAnalysis.Syntax
         ParenthesizedExpression,
         AssignmentExpression,
         CallExpression,
+        
     }
 }

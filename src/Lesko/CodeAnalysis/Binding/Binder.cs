@@ -708,7 +708,7 @@ namespace Lesko.CodeAnalysis.Binding
             {
                 case "any":
                     return TypeSymbol.Any;
-                case "bool":
+                case "booleen":
                     return TypeSymbol.Bool;
                 case "entier":
                     return TypeSymbol.Int;

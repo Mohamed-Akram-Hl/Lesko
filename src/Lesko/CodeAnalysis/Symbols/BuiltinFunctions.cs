@@ -14,7 +14,7 @@ namespace Lesko.CodeAnalysis.Symbols
 
         public static readonly FunctionSymbol abs = new FunctionSymbol("absolu", ImmutableArray.Create(new ParameterSymbol("number", TypeSymbol.Int)), TypeSymbol.Int);
         public static readonly FunctionSymbol sqrt = new FunctionSymbol("racine", ImmutableArray.Create(new ParameterSymbol("number", TypeSymbol.Float)), TypeSymbol.Float);
-        public static readonly FunctionSymbol round = new FunctionSymbol("arrondir", ImmutableArray.Create(new ParameterSymbol("number", TypeSymbol.Int)), TypeSymbol.Int);
+        public static readonly FunctionSymbol round = new FunctionSymbol("arrondir", ImmutableArray.Create(new ParameterSymbol("number", TypeSymbol.Float)), TypeSymbol.Float);
 
         public static readonly FunctionSymbol type = new FunctionSymbol("type", ImmutableArray.Create(new ParameterSymbol("any", TypeSymbol.Any)), TypeSymbol.Any);
         public static readonly FunctionSymbol len = new FunctionSymbol("long", ImmutableArray.Create(new ParameterSymbol("string", TypeSymbol.String)), TypeSymbol.Int);

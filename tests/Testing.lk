@@ -8,9 +8,13 @@ ecrire("en quelle année sommes nous ??")
 var y = entier(lire())
 var z = sub(y, x)
 ecrire("votre age est: "+ chaine(z))
-si z < 15
+si z < 15{
     ecrire("tu es un enfant")
-sinon si z >= 15 et z < 60
+}
+sinon si z >= 15 et z < 60{
     ecrire("tu es jeune")
-sinon
+}
+    
+sinon{
     ecrire("tu es vieux")
+}

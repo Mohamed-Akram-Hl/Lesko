@@ -53,6 +53,8 @@ namespace Lesko.CodeAnalysis.Binding
             new BoundBinaryOperator(SyntaxKind.SlashToken, BoundBinaryOperatorKind.Division, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.SlashToken, BoundBinaryOperatorKind.Division, TypeSymbol.Int,TypeSymbol.Float,TypeSymbol.Float),
 
+            new BoundBinaryOperator(SyntaxKind.DivKeyword, BoundBinaryOperatorKind.Div, TypeSymbol.Int),
+
             new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Int),
             new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Float),
             new BoundBinaryOperator(SyntaxKind.PowerToken, BoundBinaryOperatorKind.Power, TypeSymbol.Float,TypeSymbol.Int,TypeSymbol.Float),

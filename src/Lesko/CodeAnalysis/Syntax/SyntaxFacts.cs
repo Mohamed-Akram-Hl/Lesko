@@ -29,6 +29,7 @@ namespace Lesko.CodeAnalysis.Syntax
                 case SyntaxKind.StarToken:
                 case SyntaxKind.SlashToken:
                 case SyntaxKind.ModToken:
+                case SyntaxKind.DivKeyword:
                     return 5;
 
                 case SyntaxKind.PlusToken:
@@ -100,6 +101,10 @@ namespace Lesko.CodeAnalysis.Syntax
                     return SyntaxKind.AmpersandAmpersandToken;
                 case "mod":
                     return SyntaxKind.ModToken;
+                case "div":
+                    return SyntaxKind.DivKeyword;
+                case "non":
+                    return SyntaxKind.BangToken;
                 default:
                     return SyntaxKind.IdentifierToken;
             }
@@ -141,6 +146,8 @@ namespace Lesko.CodeAnalysis.Syntax
                     return "**";
                 case SyntaxKind.ModToken:
                     return "%";
+                case SyntaxKind.DivKeyword:
+                    return "div";
                 case SyntaxKind.BangToken:
                     return "!";
                 case SyntaxKind.EqualsToken:

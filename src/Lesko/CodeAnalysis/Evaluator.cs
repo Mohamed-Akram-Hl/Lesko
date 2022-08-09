@@ -213,7 +213,7 @@ namespace Lesko.CodeAnalysis
                         var res = Convert.ToDouble(left) / Convert.ToDouble(right);
                         if (b.Type == TypeSymbol.Float)
                             return res;
-                        return (int)res;
+                        return res;
                     }
                 case BoundBinaryOperatorKind.Power:
                     {
@@ -224,6 +224,8 @@ namespace Lesko.CodeAnalysis
                     }
                 case BoundBinaryOperatorKind.Mod:
                     return (int)left % (int)right;
+                case BoundBinaryOperatorKind.Div:
+                    return (int)left / (int)right;
                 case BoundBinaryOperatorKind.BitwiseAnd:
                     if (b.Type == TypeSymbol.Int)
                         return (int)left & (int)right;
@@ -314,7 +316,7 @@ namespace Lesko.CodeAnalysis
             }
             else if (node.Function == BuiltinFunctions.round)
             {
-                var max = (int)EvaluateExpression(node.Arguments[0]);
+                var max = EvaluateExpression(node.Arguments[0]);
 
                 return Math.Round(Convert.ToDouble(max));
             }
@@ -322,7 +324,16 @@ namespace Lesko.CodeAnalysis
             {
                 var max = EvaluateExpression(node.Arguments[0]);
 
-                return max.GetType();
+                if (max.GetType().Equals(typeof(int)))
+                    return "entier";
+                if (max.GetType().Equals(typeof(double)))
+                    return "reel";
+                if (max.GetType().Equals(typeof(string)))
+                    return "chaine";
+                if (max.GetType().Equals(typeof(bool)))
+                    return "booleen";
+
+                return null;
             }
             else if (node.Function == BuiltinFunctions.len)
             {
@@ -357,13 +368,51 @@ namespace Lesko.CodeAnalysis
             if (node.Type == TypeSymbol.Any)
                 return value;
             else if (node.Type == TypeSymbol.Bool)
-                return Convert.ToBoolean(value);
+            {
+                if (value.Equals("vrai"))
+                {
+                    value = "true";
+                }
+                else if (value.Equals("faux"))
+                {
+                    value = "false";
+                }
+                try
+                {
+                    return Convert.ToBoolean(value);
+                }
+                catch (Exception)
+                {
+                    return new Exception($"Can not Convert '{value}' to {node.Type}");
+                }  
+            }
             else if (node.Type == TypeSymbol.Int)
-                return Convert.ToInt32(value);
+                try
+                {
+                    return Convert.ToInt32(value);
+                }
+                catch (Exception)
+                {
+                    return new Exception($"Can not Convert '{value}' to {node.Type}");
+                }
             else if (node.Type == TypeSymbol.Float)
-                return Convert.ToDouble(value);           
+                try
+                {
+                    return Convert.ToDouble(value);
+                }
+                catch (Exception)
+                {
+                    return new Exception($"Can not Convert '{value}' to {node.Type}");
+                }          
             else if (node.Type == TypeSymbol.String)
-                return Convert.ToString(value);
+                try
+                {
+                    return Convert.ToString(value);
+                }
+                catch (Exception)
+                {
+                    return new Exception($"Can not Convert '{value}' to {node.Type}");
+                }
             else
                 throw new Exception($"Unexpected type {node.Type}");
         }

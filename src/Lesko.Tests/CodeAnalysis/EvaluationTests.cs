@@ -81,9 +81,9 @@ namespace Lesko.Tests.CodeAnalysis
         [InlineData("{ var i = 10 var result = 0 tantque i > 0 { result = result + i i = i - 1} retourner result }", 55)]
         [InlineData("{ var result = 0 pour i = 1 jusqua 10 { result = result + i } retourner result }", 55)]
         [InlineData("{ var a = 10 pour i = 1 jusqua (a = a - 1) { } retourner a }", 9)]
-        [InlineData("{ var a = 0 do a = a + 1 tantque a < 10 retourner a}", 10)]
-        [InlineData("{ var i = 0 tantque i < 5 { i = i + 1 si i == 5 continue } retourner i }", 5)]
-        [InlineData("{ var i = 0 do { i = i + 1 si i == 5 continue } tantque i < 5 retourner i }", 5)]
+        [InlineData("{ var a = 0 faire a = a + 1 tantque a < 10 retourner a}", 10)]
+        [InlineData("{ var i = 0 tantque i < 5 { i = i + 1 si i == 5 continuer } retourner i }", 5)]
+        [InlineData("{ var i = 0 faire { i = i + 1 si i == 5 continuer } tantque i < 5 retourner i }", 5)]
         public void Evaluator_Computes_CorrectValues(string text, object expectedValue)
         {
             AssertValue(text, expectedValue);
@@ -249,7 +249,7 @@ namespace Lesko.Tests.CodeAnalysis
             var text = @"
                 {
                     var x = 0
-                    do
+                    faire
                         x = 10
                     tantque [10]
                 }
@@ -522,8 +522,8 @@ namespace Lesko.Tests.CodeAnalysis
         }
 
         [Theory]
-        [InlineData("[break]", "break")]
-        [InlineData("[continue]", "continue")]
+        [InlineData("[arreter]", "arreter")]
+        [InlineData("[continuer]", "continuer")]
         public void Evaluator_Invalid_Break_Or_Continue(string text, string keyword)
         {
             var diagnostics = $@"
