@@ -5,6 +5,7 @@ namespace Lesko.CodeAnalysis.Binding
         Identity,
         Negation,
         LogicalNegation,
-        OnesComplement
+        OnesComplement,
+        not,
     }
 }

@@ -38,7 +38,7 @@ namespace Lesko.CodeAnalysis.Syntax
         FloatToken,
         PowerToken,
         ModToken,
-        DivKeyword,
+        
 
         // Keywords
         BreakKeyword,
@@ -55,6 +55,8 @@ namespace Lesko.CodeAnalysis.Syntax
         VarKeyword,
         WhileKeyword,
         DoKeyword,
+        DivKeyword,
+        notkeyword,
 
         // Nodes
         CompilationUnit,

@@ -27,6 +27,7 @@ namespace Lesko.CodeAnalysis.Binding
         private static BoundUnaryOperator[] _operators =
         {
             new BoundUnaryOperator(SyntaxKind.BangToken, BoundUnaryOperatorKind.LogicalNegation, TypeSymbol.Bool),
+             new BoundUnaryOperator(SyntaxKind.notkeyword, BoundUnaryOperatorKind.not, TypeSymbol.Bool),
 
             new BoundUnaryOperator(SyntaxKind.PlusToken, BoundUnaryOperatorKind.Identity, TypeSymbol.Int),
             new BoundUnaryOperator(SyntaxKind.MinusToken, BoundUnaryOperatorKind.Negation, TypeSymbol.Int),

@@ -171,6 +171,8 @@ namespace Lesko.CodeAnalysis
                     return -(int)operand;
                 case BoundUnaryOperatorKind.LogicalNegation:
                     return !(bool)operand;
+                case BoundUnaryOperatorKind.not:
+                    return !(bool)operand;
                 case BoundUnaryOperatorKind.OnesComplement:
                     return ~(int)operand;
                 default:

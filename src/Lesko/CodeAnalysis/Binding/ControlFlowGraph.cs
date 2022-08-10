@@ -183,6 +183,12 @@ namespace Lesko.CodeAnalysis.Binding
                                 var elseCondition = cgs.JumpIfTrue ? negatedCondition : cgs.Condition;
                                 Connect(current, thenBlock, thenCondition);
                                 Connect(current, elseBlock, elseCondition);
+
+                                var notCondition = Negate(cgs.Condition);
+                                var afterCondition = cgs.JumpIfTrue ? cgs.Condition : notCondition;
+                                var sinonCondition = cgs.JumpIfTrue ? notCondition : cgs.Condition;
+                                Connect(current, thenBlock, afterCondition);
+                                Connect(current, elseBlock, sinonCondition);
                                 break;
                             case BoundNodeKind.ReturnStatement:
                                 Connect(current, _end);
@@ -258,6 +264,18 @@ namespace Lesko.CodeAnalysis.Binding
                 }
 
                 var op = BoundUnaryOperator.Bind(SyntaxKind.BangToken, TypeSymbol.Bool);
+                return new BoundUnaryExpression(op, condition);
+            }
+
+            private BoundExpression not(BoundExpression condition)
+            {
+                if (condition is BoundLiteralExpression literal)
+                {
+                    var value = (bool)literal.Value;
+                    return new BoundLiteralExpression(!value);
+                }
+
+                var op = BoundUnaryOperator.Bind(SyntaxKind.notkeyword, TypeSymbol.Bool);
                 return new BoundUnaryExpression(op, condition);
             }
         }

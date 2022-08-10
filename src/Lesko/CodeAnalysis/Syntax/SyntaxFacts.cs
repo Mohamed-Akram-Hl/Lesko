@@ -12,6 +12,7 @@ namespace Lesko.CodeAnalysis.Syntax
                 case SyntaxKind.PlusToken:
                 case SyntaxKind.MinusToken:
                 case SyntaxKind.BangToken:
+                case SyntaxKind.notkeyword:
                 case SyntaxKind.TildeToken:
                     return 6;
 
@@ -104,7 +105,7 @@ namespace Lesko.CodeAnalysis.Syntax
                 case "div":
                     return SyntaxKind.DivKeyword;
                 case "non":
-                    return SyntaxKind.BangToken;
+                    return SyntaxKind.notkeyword;
                 default:
                     return SyntaxKind.IdentifierToken;
             }
@@ -168,6 +169,8 @@ namespace Lesko.CodeAnalysis.Syntax
                     return "&&";
                 case SyntaxKind.PipeToken:
                     return "|";
+                case SyntaxKind.notkeyword:
+                    return "non";
                 case SyntaxKind.PipePipeToken:
                     return "||";
                 case SyntaxKind.HatToken:
