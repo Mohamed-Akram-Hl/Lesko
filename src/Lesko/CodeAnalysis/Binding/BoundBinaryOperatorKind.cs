@@ -19,6 +19,9 @@ namespace Lesko.CodeAnalysis.Binding
         GreaterOrEquals,
         Power,
         Mod,
+        ModKey,
+        OrKey,
+        AndKey,
         Div,
     }
 }

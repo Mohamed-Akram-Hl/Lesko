@@ -57,6 +57,9 @@ namespace Lesko.CodeAnalysis.Syntax
         DoKeyword,
         DivKeyword,
         notkeyword,
+        orKeyword,
+        andKeyword,
+        ModKeyword,
 
         // Nodes
         CompilationUnit,

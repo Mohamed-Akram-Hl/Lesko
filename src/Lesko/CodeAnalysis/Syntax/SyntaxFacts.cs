@@ -30,6 +30,7 @@ namespace Lesko.CodeAnalysis.Syntax
                 case SyntaxKind.StarToken:
                 case SyntaxKind.SlashToken:
                 case SyntaxKind.ModToken:
+                case SyntaxKind.ModKeyword:
                 case SyntaxKind.DivKeyword:
                     return 5;
 
@@ -47,10 +48,12 @@ namespace Lesko.CodeAnalysis.Syntax
 
                 case SyntaxKind.AmpersandToken:
                 case SyntaxKind.AmpersandAmpersandToken:
+                case SyntaxKind.andKeyword:
                     return 2;
 
                 case SyntaxKind.PipeToken:
                 case SyntaxKind.PipePipeToken:
+                case SyntaxKind.orKeyword:
                 case SyntaxKind.HatToken:
                     return 1;
 
@@ -97,11 +100,11 @@ namespace Lesko.CodeAnalysis.Syntax
                 case "faire":
                     return SyntaxKind.DoKeyword;
                 case "ou":
-                    return SyntaxKind.PipePipeToken;
+                    return SyntaxKind.orKeyword;
                 case "et":
-                    return SyntaxKind.AmpersandAmpersandToken;
+                    return SyntaxKind.andKeyword;
                 case "mod":
-                    return SyntaxKind.ModToken;
+                    return SyntaxKind.ModKeyword;
                 case "div":
                     return SyntaxKind.DivKeyword;
                 case "non":
@@ -147,6 +150,8 @@ namespace Lesko.CodeAnalysis.Syntax
                     return "**";
                 case SyntaxKind.ModToken:
                     return "%";
+                case SyntaxKind.ModKeyword:
+                    return "mod";
                 case SyntaxKind.DivKeyword:
                     return "div";
                 case SyntaxKind.BangToken:
@@ -167,12 +172,16 @@ namespace Lesko.CodeAnalysis.Syntax
                     return "&";
                 case SyntaxKind.AmpersandAmpersandToken:
                     return "&&";
+                case SyntaxKind.andKeyword:
+                    return "et";
                 case SyntaxKind.PipeToken:
                     return "|";
                 case SyntaxKind.notkeyword:
                     return "non";
                 case SyntaxKind.PipePipeToken:
                     return "||";
+                case SyntaxKind.orKeyword:
+                    return "ou";
                 case SyntaxKind.HatToken:
                     return "^";
                 case SyntaxKind.EqualsEqualsToken:

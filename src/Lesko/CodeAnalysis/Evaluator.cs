@@ -226,6 +226,8 @@ namespace Lesko.CodeAnalysis
                     }
                 case BoundBinaryOperatorKind.Mod:
                     return (int)left % (int)right;
+                case BoundBinaryOperatorKind.ModKey:
+                    return (int)left % (int)right;
                 case BoundBinaryOperatorKind.Div:
                     return (int)left / (int)right;
                 case BoundBinaryOperatorKind.BitwiseAnd:
@@ -245,7 +247,11 @@ namespace Lesko.CodeAnalysis
                         return (bool)left ^ (bool)right;
                 case BoundBinaryOperatorKind.LogicalAnd:
                     return (bool)left && (bool)right;
+                case BoundBinaryOperatorKind.AndKey:
+                    return (bool)left && (bool)right;
                 case BoundBinaryOperatorKind.LogicalOr:
+                    return (bool)left || (bool)right;
+                case BoundBinaryOperatorKind.OrKey:
                     return (bool)left || (bool)right;
                 case BoundBinaryOperatorKind.Equals:
                     return Equals(left, right);

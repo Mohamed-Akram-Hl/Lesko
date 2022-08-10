@@ -62,6 +62,8 @@ namespace Lesko.CodeAnalysis.Binding
 
             new BoundBinaryOperator(SyntaxKind.ModToken, BoundBinaryOperatorKind.Mod, TypeSymbol.Int),
 
+            new BoundBinaryOperator(SyntaxKind.ModKeyword, BoundBinaryOperatorKind.ModKey, TypeSymbol.Int),
+
             new BoundBinaryOperator(SyntaxKind.AmpersandToken, BoundBinaryOperatorKind.BitwiseAnd, TypeSymbol.Int),
             new BoundBinaryOperator(SyntaxKind.PipeToken, BoundBinaryOperatorKind.BitwiseOr, TypeSymbol.Int),
             new BoundBinaryOperator(SyntaxKind.HatToken, BoundBinaryOperatorKind.BitwiseXor, TypeSymbol.Int),
@@ -98,8 +100,10 @@ namespace Lesko.CodeAnalysis.Binding
 
             new BoundBinaryOperator(SyntaxKind.AmpersandToken, BoundBinaryOperatorKind.BitwiseAnd, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.AmpersandAmpersandToken, BoundBinaryOperatorKind.LogicalAnd, TypeSymbol.Bool),
+            new BoundBinaryOperator(SyntaxKind.andKeyword, BoundBinaryOperatorKind.AndKey, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.PipeToken, BoundBinaryOperatorKind.BitwiseOr, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.PipePipeToken, BoundBinaryOperatorKind.LogicalOr, TypeSymbol.Bool),
+            new BoundBinaryOperator(SyntaxKind.orKeyword, BoundBinaryOperatorKind.OrKey, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.HatToken, BoundBinaryOperatorKind.BitwiseXor, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.EqualsEqualsToken, BoundBinaryOperatorKind.Equals, TypeSymbol.Bool),
             new BoundBinaryOperator(SyntaxKind.BangEqualsToken, BoundBinaryOperatorKind.NotEquals, TypeSymbol.Bool),
