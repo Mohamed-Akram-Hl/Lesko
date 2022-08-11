@@ -326,9 +326,9 @@ namespace Lesko.CodeAnalysis
             }
             else if (node.Function == BuiltinFunctions.abs)
             {
-                var max = (int)EvaluateExpression(node.Arguments[0]);
+                var max = EvaluateExpression(node.Arguments[0]);
 
-                return Math.Abs(max);
+                return Math.Abs(Convert.ToDouble(max));
             }
             else if (node.Function == BuiltinFunctions.sqrt)
             {
