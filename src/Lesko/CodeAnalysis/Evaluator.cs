@@ -166,9 +166,23 @@ namespace Lesko.CodeAnalysis
             switch (u.Op.Kind)
             {
                 case BoundUnaryOperatorKind.Identity:
-                    return (int)operand;
+                    try
+                    {
+                        return (int)operand;
+                    }
+                    catch
+                    {
+                        return (double)operand;
+                    }
                 case BoundUnaryOperatorKind.Negation:
-                    return -(int)operand;
+                    try
+                    {
+                        return -(int)operand;
+                    }
+                    catch
+                    {
+                        return -(double)operand;
+                    }
                 case BoundUnaryOperatorKind.LogicalNegation:
                     return !(bool)operand;
                 case BoundUnaryOperatorKind.not:
