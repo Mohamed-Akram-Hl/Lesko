@@ -49,7 +49,7 @@ namespace Lesko.CodeAnalysis.Binding
             if (from == TypeSymbol.Float && to == TypeSymbol.Int)
             {
                 return Conversion.Implicit;
-            }             
+            }
             if (from == TypeSymbol.String)
             {
                 if (to == TypeSymbol.Bool || to == TypeSymbol.Int)
