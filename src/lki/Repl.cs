@@ -46,7 +46,7 @@ namespace Lesko
             {
                 var text = EditSubmission();
                 if (string.IsNullOrEmpty(text))
-                    return;
+                    continue;
 
                 if (!text.Contains(Environment.NewLine) && text.StartsWith("#"))
                     EvaluateMetaCommand(text);
@@ -58,7 +58,8 @@ namespace Lesko
             }
         }
 
-        private delegate object LineRenderHandler(IReadOnlyList<string> lines, int lineIndex, object state);
+        private delegate object? LineRenderHandler(IReadOnlyList<string> lines, int lineIndex, object? state);
+
         private sealed class SubmissionView
         {
             private readonly LineRenderHandler _lineRenderer;
@@ -87,7 +88,7 @@ namespace Lesko
                 Console.CursorVisible = false;
 
                 var lineCount = 0;
-                var state = (object)null;
+                var state = (object?)null;
 
                 foreach (var line in _submissionDocument)
                 {
@@ -421,7 +422,7 @@ namespace Lesko
             _submissionHistory.Clear();
         }
 
-        protected virtual object RenderLine(IReadOnlyList<string> lines, int lineIndex, object state)
+        protected virtual object? RenderLine(IReadOnlyList<string> lines, int lineIndex, object? state)
         {
             Console.Write(lines[lineIndex]);
             return state;
@@ -560,7 +561,7 @@ namespace Lesko
                     {
                         Console.Out.WriteSpace();
                         Console.Out.WritePunctuation("<");
-                        Console.Out.WriteIdentifier(pi.Name);
+                        Console.Out.WriteIdentifier(pi.Name!);
                         Console.Out.WritePunctuation(">");
                     }
                     Console.Out.WriteLine();
