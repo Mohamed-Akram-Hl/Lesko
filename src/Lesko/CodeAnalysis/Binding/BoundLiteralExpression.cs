@@ -13,7 +13,7 @@ namespace Lesko.CodeAnalysis.Binding
                 Type = TypeSymbol.Bool;
             else if (value is int)
                 Type = TypeSymbol.Int;
-            else if (double.TryParse(Convert.ToString(value), out _))
+            else if (value is double)
                 Type = TypeSymbol.Float;
             else if (value is string)
                 Type = TypeSymbol.String;
