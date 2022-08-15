@@ -73,5 +73,5 @@ tantque i < 10
 }
 ```
 
-[<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.1.%20Loops/loops.md) |
-[Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.3.%20Functions/Functions.md)
+[<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.1.%20Loops/loops.md) |
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.3.%20Functions/Functions.md)
