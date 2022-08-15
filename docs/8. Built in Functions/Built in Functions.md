@@ -157,5 +157,5 @@ Convert the number "vrai" to boolean:
 var x = booleen("vrai")
 ```
 
-[<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/7.%20Operators/Operators.md) |
+[<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/7.%20Operators/Operators.md) |
 [Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.%20%20Si%20...%20Sinon/Si%20...%20Sinon.md)
