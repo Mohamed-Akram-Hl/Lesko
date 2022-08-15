@@ -52,7 +52,7 @@ namespace Lesko.CodeAnalysis.Binding
             }
             if (from == TypeSymbol.String)
             {
-                if (to == TypeSymbol.Bool || to == TypeSymbol.Int)
+                if (to == TypeSymbol.Bool || to == TypeSymbol.Int || to == TypeSymbol.Float)
                     return Conversion.Explicit;
             }
 
