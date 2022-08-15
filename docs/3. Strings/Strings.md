@@ -20,4 +20,4 @@ To get the length of a string, use the `long()` function.
 ecrire(long("bonjour"))
 ```
 [<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/2.%20Getting%20Started/Getting%20Started.md) |
-[Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/4.%20Variables/Variables.md)
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/4.%20Variables/Variables.md)
