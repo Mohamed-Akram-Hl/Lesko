@@ -268,9 +268,19 @@ namespace Lesko.CodeAnalysis
                 case BoundBinaryOperatorKind.OrKey:
                     return (bool)left || (bool)right;
                 case BoundBinaryOperatorKind.Equals:
-                    return Equals(left, right);
+                    {
+                        var res = Convert.ToDouble(left) == Convert.ToDouble(right);
+                        if (b.Type == TypeSymbol.Float)
+                            return res;
+                        return (bool)res;
+                    }
                 case BoundBinaryOperatorKind.NotEquals:
-                    return !Equals(left, right);
+                    {
+                        var res = Convert.ToDouble(left) != Convert.ToDouble(right);
+                        if (b.Type == TypeSymbol.Float)
+                            return res;
+                        return (bool)res;
+                    }
                 case BoundBinaryOperatorKind.Less:
                     {
                         var res = Convert.ToDouble(left) < Convert.ToDouble(right);
