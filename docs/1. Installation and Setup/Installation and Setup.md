@@ -54,4 +54,4 @@ Search for Lesko then install it and your good to go : )
 
 > To learn how to create a lesko file and run your first code just hit the next button.
 
-[Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/2.%20Getting%20Started/Getting%20Started.md)
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/2.%20Getting%20Started/Getting%20Started.md)
