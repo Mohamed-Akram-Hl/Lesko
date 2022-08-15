@@ -56,4 +56,4 @@ pour i = 0 jusqua 4
 
 
 [<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.%20%20Si%20...%20Sinon/Si%20...%20Sinon.md) |
-[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/main/docs/9.2.%20Arreter%20and%20Continuer/Arreter%20and%20Continuer.md)
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.2.%20Arreter%20and%20Continuer/Arreter%20and%20Continuer.md)
