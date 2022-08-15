@@ -90,4 +90,4 @@ verification(a, b, c, delta)
 // fin
 ```
 
-[<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.3.%20Functions/Functions.md)
+[<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.3.%20Functions/Functions.md)
