@@ -80,4 +80,4 @@ sinon
 ```
 
 [<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/8.%20Built%20in%20Functions/Built%20in%20Functions.md) |
-[Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.1.%20Loops/loops.md)
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.1.%20Loops/loops.md)
