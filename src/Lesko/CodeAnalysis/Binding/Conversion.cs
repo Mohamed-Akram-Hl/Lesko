@@ -45,7 +45,12 @@ namespace Lesko.CodeAnalysis.Binding
             {
                 return Conversion.Implicit;
             }
-                
+
+            if (from == TypeSymbol.Float && to == TypeSymbol.Bool)
+            {
+                return Conversion.Implicit;
+            }
+
             if (from == TypeSymbol.Float && to == TypeSymbol.Int)
             {
                 return Conversion.Implicit;
