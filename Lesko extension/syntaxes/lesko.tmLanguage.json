@@ -1,0 +1,77 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Lesko",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#storge"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#control"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.lesko",
+				"match": "\\b(si|sinon|pour|tantque|arreter|continuer|retourner|jusqua|faire)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.lesko",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lesko",
+					"match": "\\\\."
+				}
+			]
+		},
+		"types": {
+			"patterns": [{
+				"name": "entity.name.type.class",
+				"match": "\\b(chaine|reel|entier)\\b"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\b(ecrire|lire|alea|absolu|racine|arrondir|type|long)\\b"
+			}]
+		},
+		"storge": {
+			"patterns": [{
+				"name": "storage.type",
+				"match": "\\b(fonction|var|let)\\b"
+			}]
+		},
+		"boolean": {
+			"patterns": [{
+				"name": "constant.language",
+				"match": "\\b(vrai|faux)\\b"
+			}]
+		},
+		"control": {
+			"patterns": [{
+				"name": "keyword.operator.logical.python",
+				"match": "\\b(mod|div|ou|et)\\b"
+			}]
+		}
+	},
+	"scopeName": "source.lk"
+}

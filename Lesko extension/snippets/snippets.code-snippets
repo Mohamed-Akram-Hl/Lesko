@@ -1,0 +1,147 @@
+{
+    "ecrire": {
+        "prefix": "ecrire",
+        "body": "ecrire($1)",
+        "description": "entity.name.function"
+      },
+      "lire": {
+        "prefix": "lire",
+        "body": "lire($1)",
+        "description": "entity.name.function"
+      },
+      "alea": {
+        "prefix": "alea",
+        "body": "alea($1)",
+        "description": "entity.name.function"
+      },
+      "absolu": {
+        "prefix": "absolu",
+        "body": "absolu($1)",
+        "description": "entity.name.function"
+      },
+      "racine": {
+        "prefix": "racine",
+        "body": "racine($1)",
+        "description": "entity.name.function"
+      },
+      "arrondir": {
+        "prefix": "arrondir",
+        "body": "arrondir($1)",
+        "description": "entity.name.function"
+      },
+      "type": {
+        "prefix": "type",
+        "body": "type($1)",
+        "description": "entity.name.function"
+      },
+      "long": {
+        "prefix": "long",
+        "body": "long($1)",
+        "description": "entity.name.function"
+      },
+      "chaine": {
+        "prefix": "chaine",
+        "body": "chaine($1)",
+        "description": "entity.name.type.class"
+      },
+      "reel": {
+        "prefix": "reel",
+        "body": "reel($1)",
+        "description": "entity.name.type.class"
+      },
+      "entier": {
+        "prefix": "entier",
+        "body": "entier($1)",
+        "description": "entity.name.type.class"
+      },
+      "var": {
+        "prefix": "var",
+        "body": "var ",
+        "description": "storage.type"
+      },
+      "let": {
+        "prefix": "let",
+        "body": "let ",
+        "description": "storage.type"
+      },
+      "fonction": {
+        "prefix": "fonction",
+        "body": "fonction ",
+        "description": "storage.type"
+      },
+      "vrai": {
+        "prefix": "vrai",
+        "body": "vrai",
+        "description": "boolean"
+      },
+      "faux": {
+        "prefix": "faux",
+        "body": "faux",
+        "description": "boolean"
+      },
+      "mod": {
+        "prefix": "mod",
+        "body": "mod",
+        "description": "control"
+      },
+      "div": {
+        "prefix": "div",
+        "body": "div",
+        "description": "control"
+      },
+      "ou": {
+        "prefix": "ou",
+        "body": "ou ",
+        "description": "control"
+      },
+      "si": {
+        "prefix": "si",
+        "body": "si ",
+        "description": "control.control.lesko"
+      },
+      "sinon": {
+        "prefix": "sinon",
+        "body": "sinon ",
+        "description": "keyword.control.lesko"
+      },
+      "pour": {
+        "prefix": "pour",
+        "body": "pour ",
+        "description": "keyword.control.lesko"
+      },
+      "tantque": {
+        "prefix": "tantque",
+        "body": "tantque ",
+        "description": "keyword.control.lesko"
+      },
+      "arreter": {
+        "prefix": "arreter",
+        "body": "arreter",
+        "description": "keyword.control.lesko"
+      },
+      "continuer": {
+        "prefix": "continuer",
+        "body": "continuer",
+        "description": "keyword.control.lesko"
+      },
+      "retourner": {
+        "prefix": "retourner",
+        "body": "retourner ",
+        "description": "keyword.control.lesko"
+      },
+      "jusqua": {
+        "prefix": "jusqua",
+        "body": "jusqua ",
+        "description": "keyword.control.lesko"
+      },
+      "faire": {
+        "prefix": "faire",
+        "body": "faire ",
+        "description": "keyword.control.lesko"
+      },
+      "et": {
+        "prefix": "et",
+        "body": "et ",
+        "description": "keyword.control.lesko"
+      }
+}
