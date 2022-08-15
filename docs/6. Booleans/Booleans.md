@@ -31,5 +31,5 @@ si b > a {
 sinon {
   ecrire("b is less than a")}
 ```
-[<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/5.%20Data%20Type/Data%20Types.md) |
+[<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/5.%20Data%20Type/Data%20Types.md) |
 [Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/7.%20Operators/Operators.md)
