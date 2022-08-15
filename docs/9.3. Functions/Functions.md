@@ -78,5 +78,5 @@ ecrire(Mul(3))
 
 > When using retourner keyword, you must specify the type of what you're returning.
 
-[<- Previous](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.2.%20Arreter%20and%20Continuer/Arreter%20and%20Continuer.md)|
-[Next ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/9.4%20Problem%20Solving/Problem%20Solving.md)
+[<- Previous](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.2.%20Arreter%20and%20Continuer/Arreter%20and%20Continuer.md)|
+[Next ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/9.4%20Problem%20Solving/Problem%20Solving.md)
