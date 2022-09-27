@@ -269,17 +269,25 @@ namespace Lesko.CodeAnalysis
                     return (bool)left || (bool)right;
                 case BoundBinaryOperatorKind.Equals:
                     {
-                        var res = Convert.ToDouble(left) == Convert.ToDouble(right);
-                        if (b.Type == TypeSymbol.Float)
-                            return res;
-                        return (bool)res;
+                        try
+                        {
+                            return Equals((string)left, (string)right);
+                        }
+                        catch
+                        {
+                            return Equals(Convert.ToDouble(left), Convert.ToDouble(right));
+                        }
                     }
                 case BoundBinaryOperatorKind.NotEquals:
                     {
-                        var res = Convert.ToDouble(left) != Convert.ToDouble(right);
-                        if (b.Type == TypeSymbol.Float)
-                            return res;
-                        return (bool)res;
+                        try
+                        {
+                            return !Equals((string)left, (string)right);
+                        }
+                        catch
+                        {
+                            return !Equals(Convert.ToDouble(left), Convert.ToDouble(right));
+                        }
                     }
                 case BoundBinaryOperatorKind.Less:
                     {
