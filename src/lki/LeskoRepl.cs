@@ -87,7 +87,7 @@ namespace Lesko
             return renderState;
         }
 
-        [MetaCommand("sub", "Clears the screen")]
+        [MetaCommand("sub", "show submissons")]
         private void EvaluateSub()
         {
             LoadSubmissions();
