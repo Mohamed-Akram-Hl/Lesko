@@ -10,6 +10,11 @@ Lesko can be used to solve some basic problems.
 
 Click on this [link][drive] and download `Lesko.zip` file.
 
+Or install [.Net][net] and download the newer version of lesko from [here][drive1].
+
+
+[net]: https://dotnet.microsoft.com/en-us/download
+[drive1]: https://drive.google.com/file/d/1Rmf5cAy1gHSlnmMucPp9lcUfJV5NHEgt/view?usp=share_link
 [drive]: https://drive.google.com/file/d/1F-jw1iJ3ZV8DEfB3QQVPYTC6bfPaZQHN/view?usp=sharing
 ![drive](https://github.com/Mohamed-Akram-Hl/docs/blob/main/assets/Screenshot%202022-08-14%20181914.png?raw=true)
 
