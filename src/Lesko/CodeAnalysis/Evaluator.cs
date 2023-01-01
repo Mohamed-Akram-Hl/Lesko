@@ -375,6 +375,12 @@ namespace Lesko.CodeAnalysis
 
                 return max.Length;
             }
+            else if (node.Function == BuiltinFunctions.Char)
+            {
+                var message = EvaluateExpression(node.Arguments[0]);
+                var num = EvaluateExpression(node.Arguments[1]);
+                return Convert.ToString(Convert.ToString(message)[(int)num]);
+            }
             else
             {
                 var locals = new Dictionary<VariableSymbol, object>();

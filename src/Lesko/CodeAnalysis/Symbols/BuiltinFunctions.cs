@@ -18,6 +18,7 @@ namespace Lesko.CodeAnalysis.Symbols
 
         public static readonly FunctionSymbol type = new FunctionSymbol("type", ImmutableArray.Create(new ParameterSymbol("any", TypeSymbol.Any)), TypeSymbol.Any);
         public static readonly FunctionSymbol len = new FunctionSymbol("long", ImmutableArray.Create(new ParameterSymbol("string", TypeSymbol.String)), TypeSymbol.Int);
+        public static readonly FunctionSymbol Char = new FunctionSymbol("Char", ImmutableArray.Create(new ParameterSymbol("string", TypeSymbol.String), new ParameterSymbol("number", TypeSymbol.Int)), TypeSymbol.String);
         internal static IEnumerable<FunctionSymbol> GetAll()
             => typeof(BuiltinFunctions).GetFields(BindingFlags.Public | BindingFlags.Static)
                                        .Where(f => f.FieldType == typeof(FunctionSymbol))

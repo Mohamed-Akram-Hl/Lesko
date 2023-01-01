@@ -96,7 +96,7 @@ namespace Lesko
         [MetaCommand("about", "show some information")]
         private void EvaluateAbout()
         {
-            Console.WriteLine("Compiler for the algorithmic language\nmade by Akram Helali\ninspired from minsk Compiler\nthanks for everyone supported The whole way along");
+            Console.WriteLine("Compiler for the algorithmic language\nmade by Akram Hlali\ninspired from minsk Compiler\nthanks for everyone supported The whole way along");
         }
 
         [MetaCommand("cls", "Clears the screen")]
