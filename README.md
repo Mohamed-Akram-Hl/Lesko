@@ -5,7 +5,7 @@
 </h1>
 
 
-Lesko is a programming language designed to be similar to the algorithmic language.
+Lesko is a programming language designed to have a similar syntax to the pseudocode that we use to write algorthims.
 
 Lesko can be used to solve some basic problems.
 
