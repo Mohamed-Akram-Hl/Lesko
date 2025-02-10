@@ -1,6 +1,6 @@
 # مرحبا بك في Lesko
 
-[English](https://github.com/Mohamed-Akram-Hl/docs/blob/main/0.%20Intro/English%20Introduction.md) |
+[English](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/0.%20Intro/English%20Introduction.md) |
 [Français](https://github.com/Mohamed-Akram-Hl/docs/blob/main/0.%20Intro/French%20Introduction.md)
 <h1 align="center">
   <img src="https://github.com/Mohamed-Akram-Hl/docs/blob/main/assets/Logo.png?raw=true" width="200px"/>
