@@ -1,7 +1,7 @@
 # Bienvenue à Lesko
 
 [Arabe](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/0.%20Intro/Arabic%20Introduction.md) |
-[Anglais](https://github.com/Mohamed-Akram-Hl/docs/blob/main/0.%20Intro/English%20Introduction.md)
+[Anglais](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/0.%20Intro/English%20Introduction.md)
 
 <h1 align="center">  
   <img src="https://github.com/Mohamed-Akram-Hl/docs/blob/main/assets/Logo.png?raw=true" width="200px"/>  
