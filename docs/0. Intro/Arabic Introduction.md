@@ -103,4 +103,4 @@ Les solutions sont:
 ![quad](https://raw.githubusercontent.com/Mohamed-Akram-Hl/docs/main/assets/Screenshot%202023-02-10%20200951.png)
 
 
-[التالي ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/1.%20Installation%20and%20Setup/Installation%20and%20Setup.md)
+[التالي ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/1.%20Installation%20and%20Setup/Installation%20and%20Setup.md)
