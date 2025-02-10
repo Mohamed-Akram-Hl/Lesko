@@ -98,4 +98,4 @@ Les solutions sont :
 
 > Pour apprendre comment créer un fichier Lesko et exécuter votre premier code, cliquez simplement sur le bouton suivant.  
 
-[Suivant ->](https://github.com/Mohamed-Akram-Hl/docs/blob/main/1.%20Installation%20and%20Setup/Installation%20and%20Setup.md)
+[Suivant ->](https://github.com/Mohamed-Akram-Hl/Lesko/blob/master/docs/1.%20Installation%20and%20Setup/Installation%20and%20Setup.md)
